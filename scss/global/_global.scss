@@ -1,0 +1,30 @@
+body {
+  background-color: #fff;
+  color: #000;
+  font-family: var(--font-1);
+  font-weight: normal;
+  position: relative;
+  overflow-x: hidden;
+  &.lock {
+    overflow: hidden;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  &--small {
+    max-width: 1020px;
+  }
+}
+
+.--pt {
+  padding-top: 126px;
+}
+
+.--nmb {
+  margin-bottom: 0 !important;
+}

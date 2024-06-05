@@ -1,0 +1,491 @@
+.lesson {
+  padding: 30px 100px;
+  border-radius: 20px;
+  background: rgb(246, 240, 228);
+  margin-bottom: 30px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__about {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &--vert-c {
+      align-items: center;
+    }
+  }
+
+  &__content {
+    width: 100%;
+    max-width: 620px;
+    margin-right: 58px;
+  }
+
+  &__title {
+    padding: 15px 30px;
+    border-radius: 10px;
+    background-image: var(--gradient);
+    color: rgb(255, 255, 255);
+    font-family: var(--font-2);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &--tmpl-2 {
+      text-align: center;
+    }
+
+    &--tmpl-3 {
+      padding: 9px 34px;
+    }
+  }
+
+  &__about-block {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &--w-620 {
+      max-width: 620px;
+      margin: 0 auto;
+    }
+  }
+
+  &__name {
+    font-family: var(--font-2);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__name-title {
+    color: rgb(var(--color-select));
+  }
+
+  &__name-text {
+  }
+
+  &__desc {
+    width: 46px;
+    height: 46px;
+    border-radius: 10px;
+    background-color: rgb(var(--color-select));
+    border: 0;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      width: 10.6px;
+      height: 24px;
+      background-image: url(../img/lesson/desc.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+    &:last-child {
+      margin-left: 10px;
+      margin-right: 0;
+    }
+    &:first-child {
+      margin-left: 0;
+      margin-right: 10px;
+    }
+
+    &-info {
+      position: absolute;
+      z-index: 10;
+      width: 380px;
+      top: calc(100%);
+      margin-top: 5px;
+      border-radius: 10px;
+      backdrop-filter: blur(17px);
+      background-color: rgba(255, 255, 255, 0.7);
+      padding: 20px;
+      display: none;
+
+      &--tmpl-2 {
+        width: 360px;
+        background-color: rgb(255, 255, 255);
+        padding: 30px;
+        margin-top: 17px;
+        &::after {
+          content: '';
+          position: absolute;
+          width: 0;
+          height: 0;
+          border: 0 solid transparent;
+          border-right-width: 22px;
+          border-left-width: 22px;
+          border-bottom: 16px solid #fff;
+          bottom: 100%;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+        &::before {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 32px;
+          left: 0;
+          bottom: 100%;
+        }
+
+        li {
+          min-height: 75px;
+          font-size: 14px;
+
+          &:last-child {
+            min-height: auto;
+            &::after {
+              display: none;
+            }
+          }
+
+          &::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            height: calc(100% - 45px);
+            bottom: 0;
+            left: 15px;
+            transform: translateX(-50%);
+            background-image: url('../img/icons/dash.svg');
+            background-repeat: repeat-y;
+          }
+        }
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 5px;
+        left: 0;
+        bottom: 100%;
+      }
+
+      li {
+        position: relative;
+        color: rgb(0, 0, 0);
+        font-size: 16px;
+        line-height: 165%;
+        letter-spacing: 0%;
+        padding-left: 45px;
+        margin-bottom: 15px;
+        text-align: left;
+        font-family: var(--font-1);
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          width: 30px;
+          height: 30px;
+          background-image: url('../img/icons/list-i.svg');
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain;
+          left: 0;
+        }
+      }
+    }
+
+    &:hover {
+      .lesson__desc-info {
+        display: block;
+      }
+    }
+  }
+
+  &__infos {
+    margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__info-title {
+    display: flex;
+    align-items: center;
+  }
+
+  &__info-icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    margin-right: 12px;
+    flex-shrink: 0;
+  }
+
+  &__info-text {
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0%;
+
+    span {
+      font-size: 20px;
+      font-weight: 700;
+      color: rgb(var(--color-select));
+      letter-spacing: 0%;
+      text-transform: uppercase;
+    }
+  }
+
+  &__img {
+    border-radius: 10px;
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  &__video {
+    margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__homework {
+    color: rgb(255, 255, 255);
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    padding: 15px 90px 15px 20px;
+    border-radius: 10px;
+    background-image: var(--gradient);
+    min-height: 92px;
+    position: relative;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 56px;
+      height: 69px;
+      top: 50%;
+      right: 34px;
+      transform: translateY(-50%);
+      background-image: url('../img/lesson/homework.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+  }
+
+  &__homework-title {
+    display: flex;
+    align-items: center;
+    font-family: var(--font-2);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+    margin-right: 30px;
+    padding-right: 20px;
+    border-right: 1px solid rgb(255, 255, 255);
+    flex-shrink: 0;
+    min-height: 63px;
+  }
+
+  &__homework-text {
+    p {
+      font-size: 16px;
+      line-height: 120%;
+      letter-spacing: 0%;
+      margin-bottom: 10px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .lesson {
+    padding: 30px 20px;
+
+    &__title {
+      font-size: 20px;
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .lesson {
+    &__content {
+      margin-right: 20px;
+    }
+    &__img {
+      max-width: 250px;
+    }
+    &__homework-title {
+      font-size: 20px;
+      min-height: 40px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .lesson {
+    &__title,
+    &__about-block,
+    &__infos {
+      margin-bottom: 20px;
+    }
+    &__info {
+      margin-bottom: 10px;
+    }
+    &__title {
+      font-size: 18px;
+      padding: 10px;
+    }
+    &__name {
+      font-size: 20px;
+    }
+    &__info-text {
+      font-size: 14px;
+      span {
+        font-size: 16px;
+      }
+    }
+    &__img {
+      max-width: 200px;
+    }
+
+    &__desc-info {
+      padding: 10px;
+      width: 300px;
+
+      &--tmpl-2 {
+        width: 300px;
+        padding: 10px;
+        li {
+          font-size: 12px;
+          min-height: 55px;
+
+          &::after {
+            left: 10px;
+            height: calc(100% - 35px);
+          }
+        }
+      }
+
+      li {
+        font-size: 12px;
+        padding-left: 30px;
+
+        &::before {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .lesson {
+    &__homework {
+      flex-direction: column;
+      align-items: flex-start;
+      min-height: auto;
+    }
+    &__homework-title {
+      min-height: auto;
+      margin-right: 0;
+      padding-right: 0;
+      border-right: 0;
+      margin-bottom: 5px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid rgb(255, 255, 255);
+      align-items: flex-start;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .lesson {
+    &__img {
+      max-width: 150px;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .lesson {
+    &__about {
+      flex-direction: column-reverse;
+    }
+    &__img {
+      margin: 0 auto 20px;
+    }
+    &__homework {
+      padding: 15px 20px;
+
+      &::before {
+        display: none;
+      }
+    }
+    &__homework-title {
+      font-size: 18px;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .lesson {
+    &__desc {
+      &-info {
+        left: auto;
+        right: 0;
+        transform: translateX(0%);
+      }
+    }
+  }
+}

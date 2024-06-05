@@ -1,0 +1,41 @@
+.content {
+  margin-bottom: 70px;
+  &__wrapper {
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  &__title-big {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  &__video {
+  }
+
+  &__btn {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    &__btn {
+      max-width: 300px;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .content {
+    &__title-big {
+      br {
+        display: none;
+      }
+    }
+  }
+}

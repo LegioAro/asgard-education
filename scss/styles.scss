@@ -1,0 +1,25 @@
+//Global
+@import './global/fonts';
+@import './global/var';
+@import './global/reset';
+@import './global/global';
+
+//Moduls
+@import './moduls/title';
+@import './moduls/video';
+@import './moduls/btn';
+@import './moduls/pagination';
+@import './moduls/bg';
+
+//Blocks
+@import './blocks/content';
+@import './blocks/lesson';
+
+//Sections
+@import './sections/header';
+@import './sections/cover';
+@import './sections/preview';
+@import './sections/feedback';
+@import './sections/lessons';
+@import './sections/error';
+@import './sections/footer';
